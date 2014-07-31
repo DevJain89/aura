@@ -1,0 +1,103 @@
+﻿
+.tooltipClass
+{
+    position: absolute;
+    width: auto;
+    z-index: 89999;
+    line-height: 8px;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
+    background-color: #000;
+}
+
+.tooltip1:after
+{
+}
+
+
+.Cntair
+{
+    float: left;
+    width: 271px;
+    margin: 0;
+    overflow: hidden;
+    height: 301px;
+    background-image: url('../images/femaleaura.png');
+    background-color: #3f424d;
+    background-size:0% 0%;
+}
+.Cntair span
+{
+  
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px;
+    color: #fff;
+}
+
+.mainClass
+{
+    padding-left: 20px;
+}
+
+#divImage
+{
+}
+
+
+
+#cssmenu
+{
+    background: #303641;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 6em;
+    position: absolute;
+    z-index: 9999999999;
+ 
+}
+#cssmenu ul
+{
+    padding: 0 4px;
+    margin-bottom:4px;
+}
+#cssmenu li
+{
+    font: 67.5% 'Lucida Sans Unicode' , 'Bitstream Vera Sans' , 'Trebuchet Unicode MS' , 'Lucida Grande' , Verdana, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 9999999999;
+}
+#cssmenu a
+{
+    background: #303641;
+    background: #2580a2;
+    border-bottom: 1px solid #393939;
+    color: #ccc;
+    display: block;
+    margin: 0;
+    padding: 4px 4px;
+    text-decoration: none;
+    
+    font-size: 11px;
+    z-index: 9999999999;
+    cursor: pointer;
+}
+#cssmenu a:hover
+{
+    background: #2580a2 url('../images/hover.gif') left center no-repeat;
+    color: #fff;
+    padding-bottom: 4px;
+    z-index: 9999999999;
+    cursor: pointer;
+}

@@ -1,0 +1,1013 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical App - Doctors' Dashboard </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Medical Application For Doctors, Clinics and Hospitals" />
+    <meta name="author" content="Wemblo-Technologies">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="wemblo.css" rel="stylesheet">
+    <link href="fonts/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>-->
+</head>
+<body id="patientPage">
+    <header id="top" class="navbar-fixed-top">
+    	<nav class="container nav" role="navigation">
+            <div id="navHeaderLeft" class="navbar-header">
+            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navLeft">
+                	<span class="sr-only">Toggle navigation</span>
+                    <span><b class="fa fa-list-ul"></b>MENU</span>
+                </button>
+            </div>
+            <div id="navHeaderRight" class="navbar-header">
+            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navRight">
+                	<span class="sr-only">Toggle navigation</span>
+                    <span><b class="fa fa-tasks"></b>DASHBOARD</span>
+                </button>
+            </div>
+            <div class="leftGap hidden-lg"></div>
+            <div id="navLeft" class="collapse navbar-collapse navbar-left">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Alerts</a></li>
+                    <li class="dropdown">
+                    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pictogram <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Menu Name Here</a></li>
+                            <li><a href="#">Menu Name Here</a></li>
+                            <li><a href="#">Menu Name Here</a></li>
+                            <li><a href="#">Menu Name Here</a></li>
+                            <li><a href="#">Menu Name Here</a></li>
+                            <li><a href="#">Menu Name Here</a></li>
+                            <li><a href="#">Menu Name Here</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div><!-- navLeft -->
+            
+            <div id="navRight" class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Messages"><i class="fa fa-envelope"><span class="badge pull-right">5</span></i></a></li>
+                    <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Alerts"><b class="fa fa-bell"><span class="badge pull-right">8</span></b></a></li>
+                    <li class="tasks"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Today Tasks"><b class="fa fa-pencil-square"><span class="badge pull-right">7</span></b></a></li>
+                    <li class="username active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/icomale.png" alt="Username">Doctor Name <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                   	    	<li><a href="#"><b class="fa fa-pencil-square"> </b>Edit Profile</a></li>
+                            <li><a href="#"><b class="fa fa-cog"> </b>Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><b class="fa fa-sign-out"> </b>Logout</a></li>
+                        </ul>
+		    </li>
+                </ul>
+            </div><!-- navRight -->
+        </nav>
+	</header>
+    <!-- header -->
+    <header class="lowerHeader">
+    	<div  class="container">
+        	<div class="col-xs-8">
+                <div class="info col-sm-6">
+                    <img src="images/patientpic.jpg" alt="patient picture">
+                    <ul>
+                        <li class="first">Mr. Alexander Longnameson</li>
+                        <li>Age: 43   </li>
+                        <li>DOB: 11/13/1969  </li>
+                        <li>SSN: 123-45-678</li>
+                        <li class="last">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                    </ul>
+                </div>
+                <div class="properties col-sm-6">
+                   <ul>
+                        <li>Height <br> <b>5'11"</b></li>
+                        <li>Temperature <br> <b>110</b></li>
+                        <li>Pulse <br> <b>110</b></li>
+                        <li>saO2 <br> <b>80%</b></li>
+                        
+                        <li class="clearfix border"></li>
+                        
+                        <li>Weight <br> <b>170</b></li>
+                        <li>Blood Pressure <br> <b>120/80</b></li>
+                        <li>BMI <br> <b>48%</b></li>
+                        <li>RR <br> <b>55</b></li>
+                        
+                        <li class="clearfix"></li>
+                   </ul>	
+                </div><!-- properties -->
+            </div><!-- col-xs-8 -->
+            <div class="col-xs-4">
+            	<div class="history col-sm-6">
+                	<p><b>Visit: </b>07/07/2013</p>
+                    <a href="#"><b class="fa fa-user"></b>New Patient</a>
+            	</div>
+                <div class="signby col-sm-6">
+                	<b>Signed: <img src="images/drsign.jpg" alt="Doctor Signature"></b>
+                    <div class="clear"></div>
+            	</div>
+            </div>
+            
+            
+        </div><!-- container -->
+    </header>
+    <!-- topLower -->
+    <div id="wemblo" class="container">
+        <div class="halfLeft col-md-6">
+            <section class="sculpture col-xs-5">
+                <div id="sculpture" class="panel-group">
+                    
+                    <!-- Panel 1 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" style="cursor:pointer;" data-parent="#sculpture" onclick="javascript:ShowLayers();" >Select Body Layer</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#sculptureModal1" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div>
+                        <div id='cssmenu' style="display:none;" >
+<ul>
+   <li class='active'><a onclick="javascript:hideLayers();"><span>SKIN</span></a></li>
+   <li><a onclick="javascript:hideLayers();"><span>MUSCLES</span></a></li>
+   <li><a onclick="javascript:hideLayers();"><span>BONES</span></a></li>
+   <li class='last'><a onclick="javascript:hideLayers();"><span>ORGANS</span></a></li>
+</ul>
+</div>
+
+                        <div id="sculpture1" class="panel-collapse collapse in">
+                         <div class="Cntair">
+                         <div style="position:absolute;z-index:999999999;"><img alt="Back" style="margin-top: 247px;margin-left:6px;height:33px;" id="imgView" src="images/Back.png" onclick="ToggleView();">
+                         </div>
+
+
+                        <div style="visibility: visible; background-color: rgb(255, 255, 255); border: 1px solid rgb(219, 219, 219); height: 50px; width: 50px; z-index: 99999999; top: 281px; position: absolute; right: 9px; border-radius: 67px;" id="divarrows">
+                        <img style="padding-top: 17px; padding-left: 2px;" onclick="MoveLeft();" id="imgLeft" src="images/left.png">
+                         <img style="position: absolute; left: 18px; top: 16px; padding-left: 12px;" onclick="MoveRight();" id="imgRight" src="images/right.png">
+                          <img style="position: absolute; top: 3px; left: 17px;" onclick="MoveTop();" id="imgTop" src="images/top.png">
+                           <img style="bottom: 2px; position: absolute; left: 16px;" onclick="MoveBottom();" id="imgBottom" src="images/bottom.png">
+                       </div>
+        
+            <div style="overflow: hidden;" id="divImage">
+           <div><span style="margin-left: 3px; margin-right: 12px;"></span><span style="margin-right: 10px;"></span><span style="margin-left: 68px; margin-right: 10px;"></span><span style="margin-right: 2px;"></span></div>
+            <!--<div><img style="margin-top: 2px;" id="imgBackView" src="images/1393027600_radio-button_off.png" onclick="BackView();"></div>-->
+            <div>
+                <div id='divImageContainer' class='mainClass' >
+                    <div style='display: block; background: url(images/SmallFemaleFront.png) no-repeat scroll 0% 0% transparent;
+                        position: absolute; padding: 0px; width: 237px; height: 307px;margin-top:-20px;' class='map'>
+                        <canvas style='width: 237px; height: 307px; position: absolute; left: 0px; top: 0px;
+                            padding: 0px; border: 0px none; opacity: 0;' height='307' width='237'></canvas>
+                        <img border='0' class='map' usemap='#Map'  src='images/SmallFemaleFront.png' style=' opacity: 1;
+                            position: absolute; left: 0px; top: 0px; padding: 0px; border: 0px none;'>
+                    </div>
+                    <map id='Map' name='Map'>
+                        <div class='mapControl'>
+                            <area id='aHead' coords='108,47,107,46,106,45,106,44,105,43,105,42,104,41,104,41,103,40,102,40,101,38,101,38,100,37,100,35,100,34,100,33,100,32,100,31,100,30,101,29,102,29,103,29,103,28,102,27,103,26,103,25,103,23,104,22,104,21,105,20,106,19,107,18,108,17,109,16,110,16,111,15,113,15,114,15,115,15,117,15,118,15,118,16,120,16,121,16,122,17,123,18,124,20,125,21,126,23,126,25,127,27,127,28,127,29,127,29,128,30,128,30,129,31,129,33,129,36,129,35,130,37,128,39,127,41,126,41,125,42,124,42,124,43,123,44,123,46,122,47,121,48,120,49,120,50,119,50,118,51,117,51,116,51,113,51,112,51,111,51,109,49,109,49,108,48'
+                                shape='poly'   name='Head'>
+                              <area shape="poly" id="aRightUpperArm" name="Right Upper Arm" coords="65,109,77,117,78,114,79,111,81,108,82,105,86,97,87,93,89,88,90,84,91,80,92,76,92,73,93,71,95,67,97,65,100,62,101,60,101,59,103,56,102,57,101,58,98,58,94,60,91,61,87,62,85,64,82,68,81,71,80,74,78,80,76,86,75,91,73,96,70,103" href="#">
+                     
+                         <area shape="poly" id="aStomach" name="Abdomen" coords="137,96,136,101,135,104,135,108,135,112,135,116,135,119,136,121,137,124,138,127,139,130,139,131,136,134,132,136,129,138,124,140,119,141,115,141,112,141,108,140,104,139,101,137,97,135,93,133,91,131,92,129,93,128,94,125,95,122,96,119,96,116,96,111,96,108,96,105,95,101,94,98,94,95,95,97,95,98,96,99,98,100,99,101,101,101,105,101,108,99,109,98,111,96,113,95,115,92,115,91,116,93,117,95,119,96,121,97,123,99,125,99,128,100,131,100,133,99,135,98" href="#">
+                         <area shape="poly" id="aLeftLowerArm" name="Left Lower Arm" coords="150,111,151,114,152,117,153,119,154,121,155,122,156,124,157,127,158,128,159,129,160,131,161,133,163,135,164,137,165,139,166,141,167,143,168,145,169,147,169,150,169,153,170,156,171,158,173,159,176,160,179,160,182,158,183,155,184,154,182,151,181,146,178,143,176,140,175,136,173,133,172,130,171,126,170,122,168,118,167,114,166,112,164,109,163,107,161,105,160,104" href="#">
+                       <area shape="poly" id="aLeftUpperLeg" name="Left Upper Leg" coords="122,210,123,209,124,207,126,206,128,206,130,206,132,206,135,206,137,207,138,208,139,208,140,204,140,200,141,196,142,188,143,180,143,173,143,163,143,157,143,153,143,149,141,138,140,140,138,142,135,144,132,146,127,152,123,156,120,161,117,166,117,172,118,177,119,183,120,190,121,196,121,203,122,207" href="#">
+                       <area shape="poly" id="aRightUpperLeg" name="Right Upper Leg" coords="113,165,111,180,110,186,109,192,108,199,107,206,107,208,106,206,104,206,101,205,99,205,96,205,94,206,92,206,90,208,90,204,90,200,89,192,88,185,87,179,87,171,87,160,87,154,87,150,87,147,88,141,88,139,91,140,93,142,96,144,99,147,102,150,105,153,107,156,110,160" href="#">
+                        <area shape="poly" id="aLeftUpperArm" name="Left Upper Arm" coords="151,114,150,113,149,110,148,108,147,106,146,102,144,99,143,96,141,92,140,89,140,84,139,80,139,76,139,74,138,70,137,67,135,64,133,61,129,58,133,59,136,60,139,61,143,63,146,66,148,69,149,73,151,78,152,83,153,88,155,92,157,97,159,102,161,105,162,108" href="#">
+                            <area shape="poly" id="aRightLowerArm" name="Right Lower Arm" coords="66,109,65,111,64,113,64,114,63,115,62,117,61,119,60,123,59,126,58,129,57,133,55,137,54,140,53,143,51,145,50,147,49,149,48,152,47,154,45,157,46,158,47,160,48,161,50,161,51,162,53,162,54,161,56,161,57,161,58,161,58,159,59,157,59,156,60,155,60,152,60,150,60,148,61,146,62,144,63,141,65,139,65,137,67,135,69,133,70,131,72,128,73,126,75,122,77,119,77,117" href="#">
+ 
+                            <area shape="poly" id="aNeck" name="Neck" coords="98,58,100,60,101,61,102,62,104,63,106,64,108,65,110,65,112,66,115,66,117,66,120,65,122,65,124,64,126,63,128,61,129,60,132,58,123,53,122,46,121,47,120,48,118,50,116,51,114,51,112,50,110,49,109,48,108,46,107,45,107,52,107,53" href="#">
+                            <area shape="poly" name="Pelvis" id="aPelvis" coords="91,133,89,136,89,140,112,164,117,165,141,138,140,135,138,133,135,136,133,138,129,140,123,143,120,143,114,144,107,143,103,142,98,139,94,136" href="#">
+                       <area shape="poly" name="Chest" id="aChest" coords="139,83,139,86,139,90,138,93,137,95,135,98,132,100,129,101,126,101,122,100,120,98,117,97,116,94,115,91,114,94,112,96,110,98,108,100,104,101,100,101,96,100,94,98,92,96,91,94,90,92,90,89,90,86,91,83,92,78,93,74,95,71,97,68,99,65,101,67,104,68,106,68,109,69,112,69,116,69,119,69,121,69,125,68,127,67,130,66,131,65,132,67,134,69,136,73,137,78,138,81" href="#">
+                  
+                    <area shape="poly" name="Right Lower Leg" id="aRightLowerLeg" coords="91,213,93,212,95,212,99,211,102,212,105,212,108,213,107,217,106,219,106,223,107,226,107,229,107,232,107,238,107,241,106,246,105,251,104,254,103,260,102,269,103,273,103,278,103,282,103,288,104,290,104,293,103,295,103,297,102,299,100,299,99,298,97,297,95,297,92,297,90,296,89,294,89,292,90,290,90,288,92,285,93,282,92,279,93,276,93,273,93,269,94,264,93,260,93,256,92,252,91,248,90,242,90,239,89,235,90,230,90,226,91,222,91,220,91,216,91,213" href="#">
+                       
+                      
+                      <area shape="poly" name="Left Lower Leg" id="aLeftLowerLeg" coords="122,212,122,218,123,222,123,229,122,235,122,244,125,251,127,260,127,267,127,274,126,281,126,284,126,291,126,297,128,300,131,300,135,299,137,298,141,296,141,293,139,289,137,284,137,281,137,278,136,274,135,269,136,262,137,257,138,252,139,246,140,240,140,234,139,225,139,221,138,215,139,212,135,211,131,210,129,210,125,210" href="#">
+                    
+                       </div>
+                    </map> 
+                </div>
+                <div>
+                    <div style='width: 1500px; height: 400px; overflow: hidden;' id='divafterZoom'>
+                        <img border='0' style='margin-top: -20px; height: 307px; margin-left: 20px;' class='mappedObject'
+                            id='ImgMan' src='images/BigFemaleFront.png' ></div>
+                </div>
+                <div style='overflow: hidden; display: block; width: 500px;' id='DivBig'>
+                    <img border='0'id="ImgDivBig" class='ImageMapMan' src='images/BigFemaleFront.png' usemap='#ImageMapMan' ><map
+                        id='mappedObject' name='mappedObject'><div style='z-index: 54;' class='mapControl'>
+ <area shape='poly'
+                                name='Left Fore Arm' coords='898,695,969,655,974,668,980,682,984,697,990,711,995,728,1000,743,1008,761,1015,781,1024,805,1032,823,985,844,975,823,965,806,952,783,938,762,918,730,906,710' href="#">
+                                 <area shape='poly'
+                                name='Left Elbow' coords='879,647,939,609,948,622,955,631,962,640,965,649,895,689,891,679,887,669,884,662' href="#">
+                                <area shape='poly' coords='881,645,939,609,938,607,930,594,917,562,899,514,884,471,878,445,876,437,815,442,814,486,814,495,825,520,834,549,841,570,859,603,874,630,880,648,884,643' href="#">
+                                <area shape="poly" coords="658,472,661,554,648,572,634,584,621,589,603,593,584,590,566,581,552,571,542,558,536,541,535,521,540,498,547,486,558,472,570,464,587,458,621,459,652,468" href="#">
+                                <area shape="circle" coords="592,513,54" href="#">
+                                <area shape="poly" coords="745,1663,801,1662,802,1656,803,1647,803,1642,802,1636,799,1629,798,1617,798,1607,747,1607,744,1618,741,1629,739,1641,739,1653" href="#">
+                                <area shape="poly"  coords="740,1708,813,1701,808,1688,802,1678,802,1668,744,1671" href="#">
+                              <area shape="poly" coords="740,1715,765,1715,767,1723,767,1736,769,1748,765,1756,755,1757,746,1753,741,1746,739,1736,738,1724" href="#">
+                              <area shape="poly" coords="771,1713,771,1724,773,1735,772,1752,777,1755,787,1753,797,1752,807,1747,817,1745,826,1733,827,1723,819,1709,815,1707" href="#">
+                               <area shape="poly" coords="725,1329,735,1337,743,1341,752,1342,761,1345,773,1345,781,1344,791,1340,801,1333,809,1330,814,1325,819,1333,819,1343,821,1356,824,1376,823,1404,820,1436,817,1456,810,1484,803,1507,801,1526,797,1557,797,1580,798,1595,789,1594,783,1592,776,1592,771,1592,765,1592,759,1592,752,1593,748,1593,748,1576,746,1548,742,1517,736,1494,730,1472,726,1449,720,1435,719,1404,717,1392,719,1368,720,1350,720,1343" href="#"> 
+                        <area shape="poly" coords="533,1320,550,1332,562,1338,578,1341,594,1341,603,1336,612,1330,622,1321,626,1332,630,1351,631,1375,632,1396,630,1415,626,1446,617,1468,612,1499,607,1526,601,1551,599,1574,600,1601,590,1598,582,1596,575,1597,567,1598,557,1600,551,1600,553,1589,552,1563,550,1546,548,1521,544,1503,540,1482,534,1459,529,1428,527,1400,528,1374,530,1349" href="#">
+  <area shape="poly" coords="536,1225,546,1220,554,1215,567,1211,577,1211,586,1212,597,1213,608,1218,614,1224,621,1231,627,1235,630,1244,631,1231,630,1216,630,1203,639,1142,642,1119,647,1083,654,1045,660,999,663,972,652,952,636,923,610,892,594,878,567,853,546,836,521,818,518,843,513,882,510,938,512,978,515,1046,519,1098" href="#">
+  <area shape="poly" coords="720,1272,813,1269,812,1247,813,1220,817,1189,822,1152,828,1113,835,1041,837,1008,839,963,840,938,838,896,834,867,831,837,828,819,815,828,793,844,778,856,757,874,738,894,720,914,710,931,695,954,685,972,688,990,693,1027,699,1069,702,1098,706,1122,711,1152,716,1189" href="#">
+  <area shape="poly" coords="662,566,656,574,640,587,625,592,613,594,598,594,584,590,568,585,552,573,540,554,535,535,534,521,537,505,545,486,553,476,562,467,576,460,589,456,606,454,623,457,641,463,653,472,661,480" href="#">
+  <area shape="poly" coords="588,341,675,391,756,341,720,311,675,346,630,314" href="#">
+  <area shape="poly" coords="874,432,871,421,864,406,859,394,855,389,846,380,834,369,821,363,808,358,792,351,783,350,765,343,730,384,804,440" href="#">
+   <area shape="poly" name="Left Upper Arm" coords="881,645,939,609,938,607,930,594,917,562,899,514,884,471,878,445,876,437,815,442,814,486,814,495,825,520,834,549,841,570,859,603,874,630,880,648,884,643" href="#">
+  <area shape="poly" coords="471,437,484,404,503,378,517,369,538,360,563,351,583,343,624,382,553,423,542,432,537,436" href="#">
+  <area shape="poly" name="Right Upper Arm" coords="403,631,461,671,465,660,469,644,476,632,487,607,495,594,504,575,516,548,530,508,534,501,536,486,530,439,471,440,467,453,461,474,456,496,446,526,440,546,419,594,398,626" href="#">
+  <area shape="poly" name="Right Elbow" coords="410,609,470,640,467,657,463,667,459,680,454,691,449,697,377,662,383,648,393,635,402,621" href="#">
+  <area shape="poly" name="Right Wrist" coords="320,815,369,834,360,848,357,861,355,878,301,853,308,838" href="#">
+  <area shape="poly" name="Right Form Arm" coords="374,666,443,708,438,719,432,728,424,739,420,747,411,761,403,774,396,783,387,800,378,812,373,823,368,834,319,816,329,793,335,774,342,756,351,735,358,709,367,686" href="#">
+  <area shape="circle" name="Right Eye" coords="643,193,21" href="#">
+  <area shape="circle" name="Left Eye" coords="704,194,21" href="#">
+                        <area shape="poly" name="Right Face" coords="658,218,658,249,621,249,620,245,616,235,614,226,612,214,612,198,621,209,628,214,636,216,649,218" href="#">
+  <area shape="poly" name="Mouth" coords="649,258,654,260,657,261,661,264,665,267,669,268,675,268,681,268,684,267,689,265,691,262,694,261,699,259,700,256,696,255,692,254,687,252,682,251,675,252,668,251,663,252,657,254,649,255,648,257" href="#">
+                       <area coords="467,189,457,189,444,189,433,189,426,189,424,193,425,205,433,216,444,225,459,222,446,225,467,220,453,225,466,220,468,219,468,192,468,192" name="Right Face" id="ImageRightFace" shape="poly">
+
+                       <area coords="605,175,605,162,607,151,623,151,635,151,644,151,654,151,667,151,678,151,684,151,693,151,702,151,713,151,722,151,732,151,742,151,743,161,744,169,743,175" name="Forehead" id="ImageForehead" shape="poly">
+                       <area coords="609,143,612,135,615,125,620,117,624,111,631,105,639,99,647,95,655,91,664,90,674,88,682,89,692,90,701,94,710,99,720,106,726,113,732,123,738,135,739,141,739,143,738,143" Name="Scalp" id="ImageScalp" shape="poly"> </map>
+                <area shape="poly" coords="688,566,699,575,713,585,729,590,744,593,763,590,780,583,794,575,803,562,811,547,814,531,815,515,813,498,805,484,798,476,790,467,775,458,759,453,743,452,722,455,708,462,690,474,685,480" href="#">
+               <area shape="poly" id="aLowerAbdoman" Name="Lower Abdomen" coords="552,730,567,742,578,753,593,762,608,770,627,778,646,783,666,785,688,785,709,782,727,777,742,771,762,762,778,751,788,742,797,730,814,776,806,787,789,799,771,809,753,817,740,823,724,831,708,836,685,841,668,841,650,838,631,834,610,826,584,812,564,801,536,780,534,777" href="#">
+               <area shape="poly" id="aUpperAbdoman" Name="Upper Abdomen" coords="562,636,563,655,565,672,564,684,563,698,558,714,554,723,564,733,578,740,593,746,610,753,628,758,646,762,669,764,688,763,704,762,717,759,736,755,751,749,766,742,775,736,786,731,795,725,792,714,789,702,786,689,785,676,785,664,787,650,789,641,778,633,770,627,757,621,746,616,734,612,720,607,703,603,688,602,669,601,649,602,628,607,611,611,594,616,578,624,569,629" href="#">
+              <area shape="poly" coords="297,856,354,883,352,896,349,904,344,920,342,937,326,940,307,940,291,938,279,932,274,923,268,917,279,891,283,874" href="#">
+              <area shape="poly" coords="554,1611,602,1611,606,1621,606,1633,609,1643,609,1652,606,1663,605,1671,548,1669,546,1664,547,1655,545,1647,547,1638,547,1629,550,1616" href="#">
+  <area shape="poly" coords="544,1679,607,1679,610,1688,610,1698,609,1715,532,1712,540,1696,539,1688" href="#">
+  <area shape="poly" coords="582,1719,581,1733,579,1740,581,1753,575,1757,566,1755,561,1753,553,1753,548,1751,538,1750,533,1748,526,1745,524,1736,523,1728,524,1720,531,1716" href="#">
+  <area shape="poly" coords="592,1723,615,1726,610,1738,609,1751,600,1758,588,1757,583,1755,581,1744,582,1736,583,1725" href="#">
+                </div>
+
+                </div>
+                <div id="back">
+                 <div id='divBack' class='mainClass' style=" display:none;" >
+                             
+                    <div style='display: block; background: url(../images/Female_Back_sml.png) no-repeat scroll 0% 0% transparent;
+                        position: absolute; padding: 0px; width: 237px; height: 307px;margin-top:-20px' class='MapBack'>
+                       
+                        <img border='0' class='MapBack' usemap='#MapBack'  src='images/Female_Back_sml.png' style=' height: 307px; opacity: 1;
+                            position: absolute; padding: 0px; border: 0px none;'>
+                            <map id='MapBack' name='MapBack'>
+                        <div class='mapControl'>
+                        <area shape="poly" id="aBackRightUpperArm" name="Right Upper Arm" coords="131,59,133,63,135,66,136,68,137,71,138,73,139,77,139,80,139,83,139,85,145,99,148,105,151,110,152,115,163,108,156,92,153,83,150,73,147,67,144,65,142,63">
+                        <area shape="poly" id="aBackLeftUpperArm" name="Left Upper Arm" coords="90,84,90,81,90,79,90,76,91,72,91,70,93,67,94,64,96,61,98,59,94,60,89,62,86,64,83,67,81,70,79,78,78,81,76,88,74,93,71,100,66,108,65,111,75,118,79,111,81,106,83,102,85,98,87,93,90,86">
+                           <area shape="poly" id="aBackRightUpperLeg" name="Right Upper Leg" coords="141,146,137,156,133,162,126,168,118,171,118,173,120,185,120,190,122,197,123,207,123,217,123,220,138,220,139,211,141,193,142,177">
+ <area shape="poly" id="aBackLeftUpperLeg" name="Left Upper Leg" coords="88,147,93,157,99,164,105,169,111,171,112,174,111,183,108,197,107,210,107,216,107,219,106,221,91,221,91,213,90,202,89,190">
+  <area shape="poly" id="aBack" name="Back" coords="102,56,104,58,107,59,110,60,114,60,118,60,122,60,125,59,128,56,140,84,139,87,137,94,136,100,135,106,134,114,134,118,136,123,137,127,139,131,135,133,131,135,124,137,120,138,111,138,103,136,94,133,90,131,93,126,94,122,95,117,95,110,94,103,93,97,92,90,90,85,91,83,102,56">
+  <area shape="poly" id="aButtonLock" name="BottonLock" coords="88,145,90,152,93,156,96,160,99,164,102,167,106,169,108,169,110,169,112,168,114,167,115,166,117,168,119,169,122,170,126,169,129,167,132,164,134,160,137,156,139,149,141,145,142,142,142,141,139,133,138,132,135,135,132,136,128,137,123,137,117,138,110,138,104,137,97,135,94,133,91,132,90,133,89,136,88,141">
+ <area shape="poly" id="aBackRightLowerArm" name="Right Lower Arm" coords="152,113,162,107,164,109,166,111,167,113,168,116,169,119,170,123,172,130,175,137,177,142,179,144,180,145,182,146,185,148,189,150,190,151,189,153,188,153,183,152,184,154,184,156,191,166,191,167,190,168,188,168,183,161,186,170,186,172,185,172,184,172,183,170,180,162,180,171,179,172,177,172,177,171,176,161,174,161,174,168,174,170,173,170,172,169,171,157,171,156,170,154,169,151,170,148,169,146,166,140,164,136,162,133,158,128,155,123,153,119,152,116,151,114,151,113">
+  <area shape="poly" id="aBackLeftLowerArm" name="Left Lower Arm" coords="67,106,78,113,78,116,77,118,76,120,74,123,72,126,70,129,67,134,64,138,62,142,60,146,59,147,59,149,59,153,59,155,58,157,58,162,58,168,57,170,56,170,55,169,55,165,55,160,54,161,53,171,52,172,50,172,50,161,49,164,46,171,45,172,44,170,46,160,41,166,40,168,39,167,38,165,46,153,46,152,44,152,41,153,39,152,39,151,41,150,43,149,45,148,47,146,48,145,50,145,51,145,53,141,54,139,55,136,56,133,56,131,57,128,59,124,60,120,62,117,63,112">
+                        <area shape="poly" id="aBackHead" name="Head" coords="107,48,123,48,123,46,123,44,123,43,124,42,125,41,125,41,126,40,128,39,128,38,129,37,129,35,130,34,129,32,129,31,128,30,127,30,126,28,127,26,127,24,126,23,125,21,124,19,123,17,121,16,119,15,117,14,115,14,113,14,111,14,108,16,106,17,105,19,104,21,103,23,102,26,102,28,102,30,101,30,100,31,100,34,100,35,100,37,101,38,102,39,103,40,104,41,105,41,106,42,107,43">
+                       <area shape="poly" id="aBackNeck" name="Neck" coords="102,57,104,58,108,60,111,61,115,61,119,61,123,60,125,59,128,57,127,56,125,55,124,54,123,53,123,52,122,50,122,48,122,45,107,45,107,47,107,49,107,52,106,53,105,54,104,55,103,56">
+                      <area shape="poly" id="aBackLeftLowerLeg" name="Left Lower Leg" coords="91,221,90,228,89,233,89,240,89,246,90,253,91,259,92,264,93,268,93,274,93,279,93,283,92,287,92,289,90,289,90,291,91,294,93,296,95,298,99,298,101,296,103,292,103,287,102,281,102,276,102,270,103,262,106,253,107,241,107,236,106,231,106,229,106,222">
+                       <area shape="poly" id="aBackRightLowerLeg" name="Right Lower Leg" coords="123,221,123,224,123,228,123,232,123,239,123,247,124,255,126,263,128,270,128,277,128,280,127,285,126,288,127,293,128,297,131,298,134,298,137,296,138,293,139,289,138,287,137,284,137,277,137,272,137,265,139,258,140,248,140,240,140,232,139,227,139,223,139,220,137,220">
+                        </div>
+                    </map>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+
+                            <!--<div class="panel-body">
+                            	<img class="center-block" src="images/smallFemaleFront.png" alt="SmallFemaleFront">
+                            </div><!-- panel-body -->
+                        </div><!-- sculpture1 -->
+                    </div><!-- panel -->
+                    
+                    <!-- Panel 2 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#sculpture" href="#sculpture2">Current Medications</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#sculptureModal2" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="sculpture2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            </div><!-- panel-body -->
+                        </div><!-- sculpture2 -->
+                    </div><!-- panel -->
+                    
+                    <!-- Panel 3 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#sculpture" href="#sculpture3">Alt. Medications</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#sculptureModal3" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="sculpture3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            </div><!-- panel-body -->
+                        </div><!-- sculpture -->
+                    </div><!-- panel -->
+        </div>
+        <!-- sculpture panel-group -->
+        </section>
+            <!-- sculpture -->
+            <section class="chiefComplaints col-xs-7">
+                <div id="chiefComplaints" class="panel-group">
+
+                    <!-- Panel 1 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#chiefComplaints" href="#chiefC1">Chief Complaints</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#chiefCModal1" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="chiefC1" class="panel-collapse collapse in">
+                            <div class="panel-body boxscroll">
+                            	<ul>
+                                	<li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid..</li>
+                                    <li>3 wolf moon officia aute, non cupidatat skateboard dolor brunch. </li>
+                                    <li>Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et</li>
+                                    <li>3 wolf moon officia aute, non cupidatat skateboard dolor brunch. </li>
+                                    <li>3 wolf moon officia aute, non cupidatat skateboard dolor brunch. </li>
+                                    <li>Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et</li>
+                                    <li>3 wolf moon officia aute, non cupidatat skateboard dolor brunch. </li>
+                            	</ul>
+                            </div><!-- panel-body -->
+                        </div><!-- chiefC1 -->
+                    </div><!-- panel -->
+                    
+                    <!-- Panel 2 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#chiefComplaints" href="#chiefC2">Review of System</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#chiefCModal2" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="chiefC2" class="panel-collapse collapse">
+                            <div class="panel-body boxscroll">
+                            	<ul>
+                                	<li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid..</li>
+                                    <li>3 wolf moon officia aute, non cupidatat skateboard dolor brunch. </li>
+                                    <li>Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et</li>
+                            	</ul>
+                            </div><!-- panel-body -->
+                        </div><!-- chiefC2 -->
+                    </div><!-- panel -->
+                    
+                    <!-- Panel 3 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#chiefComplaints" href="#chiefC3">Physical Exam</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#chiefCModal3" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="chiefC3" class="panel-collapse collapse">
+                            <div class="panel-body boxscroll">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            </div><!-- panel-body -->
+                        </div><!-- chiefC3 -->
+                    </div><!-- panel -->
+                
+                </div><!-- sculpture panel-group -->
+            </section>
+            <!-- chiefComplaints -->
+            <div class="clearfix">
+            </div>
+        </div>
+        <!-- col-md-6 -->
+        <div class="halfRight col-md-6">
+            <section class="plan col-xs-7">
+                <div id="plan" class="panel-group">
+                    
+                    <!-- Panel 1 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#plan" href="#plan1">Plan</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#planModal1" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="plan1" class="panel-collapse collapse in">
+                            <div class="panel-body noPadding boxscroll">
+                                <div class="tblPadding">
+                                    <table class="table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>S. No.</th>
+                                                <th>Disease</th>
+                                                <th>Temp</th>
+                                                <th>Disease</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                                <td><b>401</b></td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                                <td><b>401</b></td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>03</td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                                <td><b>401</b></td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>04</td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                                <td><b>401</b></td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>05</td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                                <td><b>401</b></td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>06</td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                                <td><b>401</b></td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>07</td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                                <td><b>401</b></td>
+                                                <td>Chest Pain <br> <i>Persistent</i></td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div><!-- tblPadding -->
+                            </div><!-- panel-body -->
+                        </div><!-- plan1 -->
+                    </div><!-- panel -->
+                    
+                    <!-- Panel 2 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#plan" href="#plan2">Lab Orders</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#planModal2" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="plan2" class="panel-collapse collapse">
+                            <div class="panel-body boxscroll">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            </div><!-- panel-body -->
+                        </div><!-- plan2 -->
+                    </div><!-- panel -->
+                    
+                    <!-- Panel 3 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#plan" href="#plan3">Radiology</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#planModal3" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="plan3" class="panel-collapse collapse">
+                            <div class="panel-body boxscroll">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            </div><!-- panel-body -->
+                        </div><!-- plan3 -->
+                    </div><!-- panel -->
+                
+                </div><!-- sculpture panel-group -->
+            </section>
+            <!-- plan -->
+            <section class="algerries col-xs-5">
+                <div id="algerries" class="panel-group">
+                    
+                    <!-- Panel 1 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#algerries" href="#algerries1">Algerries</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#algerriesModal1" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="algerries1" class="panel-collapse collapse in">
+                            <div class="panel-body boxscroll">
+                                <h3>Algery 1</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                                
+                                <h3>Algery 2</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                                
+                                <h3>Algery 3</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                                
+                                <h3>Algery 4</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                                
+                                <h3>Algery 5</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                                
+                                <h3>Algery 6</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                                
+                                <h3>Algery 7</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                                
+                                <h3>Algery 8</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                                
+                            </div><!-- panel-body -->
+                        </div><!-- algerries1 -->
+                    </div><!-- panel -->
+                    
+                    <!-- Panel 2 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#algerries" href="#algerries2">Notes</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#algerriesModal2" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="algerries2" class="panel-collapse collapse">
+                            <div class="panel-body boxscroll">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            </div><!-- panel-body -->
+                        </div><!-- sculpture2 -->
+                    </div><!-- panel -->
+                    
+                    <!-- Panel 3 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#algerries" href="#algerries3">Alerts</a>
+                            <a class="icoPlus mytooltip" data-toggle="modal" href="#algerriesModal3" data-replacement="top" title="Label here"></a>
+                            </h4>
+                        </div><!-- panel-heading -->
+                        <div id="algerries3" class="panel-collapse collapse">
+                            <div class="panel-body boxscroll">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                            </div><!-- panel-body -->
+                        </div><!-- algerries3 -->
+                    </div><!-- panel -->
+                
+                </div><!-- sculpture panel-group -->
+            </section>
+            <!-- algerries -->
+            <div class="clearfix">
+            </div>
+        </div>
+        <!-- col-md-6 -->
+        <div class="clear container">
+            <div class="col-xs-6">
+                <a href="#" class="btn save"><b class="fa fa-check-square-o"></b>SAVE</a>
+            </div>
+            <div class="col-xs-6">
+                <a class="btn saveClose" href="#"><b class="fa  fa-times-circle-o"></b><b class="fa fa-check-square-o">
+                </b>SAVE &amp; CLOSE</a>
+            </div>
+        </div>
+    </div>
+    <!-- wemblo -->
+    <section id="historyBar">
+    	<div class="container">
+            <div id="carousalMedics" class="carousel slide col-sm-6" data-ride="carousel">
+                <div class="controls">
+                    <a class="carousel-control btnNext" href="#carousalMedics" data-slide="next"><b class="fa fa-caret-left"></b></a>
+                    <a class="carousel-control btnPrev" href="#carousalMedics" data-slide="prev"><b class="fa fa-caret-right"></b></a>
+                </div>
+                
+                <div class="carousel-inner">
+                    <div class="item active">
+                    	<ul class="medics">
+                        	<li>Medics <b>1</b></li>
+                            <li>Cardialogy <b>2</b></li>
+                            <li>Medics <b>3</b></li>
+                            <li>Cardialogy <b>4</b></li>
+                            <li>Medics <b>5</b></li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                    	<ul class="medics">
+                        	<li>Medics <b>1</b></li>
+                            <li>Cardialogy <b>2</b></li>
+                            <li>Medics <b>3</b></li>
+                            <li>Cardialogy <b>4</b></li>
+                            <li>Medics <b>5</b></li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                    	<ul class="medics">
+                        	<li>Medics <b>1</b></li>
+                            <li>Cardialogy <b>2</b></li>
+                            <li>Medics <b>3</b></li>
+                            <li>Cardialogy <b>4</b></li>
+                            <li>Medics <b>5</b></li>
+                        </ul>
+                    </div>
+                </div><!-- carousel-inner -->
+            </div><!-- carousalMedics -->
+            
+            <div id="carousalHistory" class="carousel slide col-sm-6" data-ride="carousel">
+                <div class="controls">
+                    <a class="carousel-control btnNext" href="#carousalHistory" data-slide="next"><b class="fa fa-caret-left"></b></a>
+                    <a class="carousel-control btnPrev" href="#carousalHistory" data-slide="prev"><b class="fa fa-caret-right"></b></a>
+                </div>
+                <a href="#"><b class="fa fa-home"></b></a>
+                <div class="carousel-inner">
+                    <div class="item active">
+                    	<ul class="medics">
+                        	<li><a href="#">Oct 01 <b>1</b></a></li>
+                            <li><a href="#">Oct 21 <b>2</b></a></li>
+                            <li><a href="#">Oct 31 <b>3</b></a></li>
+                            <li><a href="#">Oct 22 <b>4</b></a></li>
+                            <li class="last"><a href="#">Today <b class="fa fa-calendar"></b></a></li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                    	<ul class="medics">
+                        	<li><a href="#">Oct 01 <b>1</b></a></li>
+                            <li><a href="#">Oct 21 <b>2</b></a></li>
+                            <li><a href="#">Oct 31 <b>3</b></a></li>
+                            <li><a href="#">Oct 22 <b>4</b></a></li>
+                            <li><a href="#">Oct 12 <b>5</b></a></li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                    	<ul class="medics">
+                        	<li><a href="#">Oct 01 <b>1</b></a></li>
+                            <li><a href="#">Oct 21 <b>2</b></a></li>
+                            <li><a href="#">Oct 31 <b>3</b></a></li>
+                            <li><a href="#">Oct 22 <b>4</b></a></li>
+                            <li><a href="#">Oct 12 <b>5</b></a></li>
+                        </ul>
+                    </div>
+                </div><!-- carousel-inner -->
+            </div><!-- carousalMedics -->
+        </div><!-- container -->
+    </section>
+    <!-- historyBar -->
+    <aside id="pictogram" class="visible-lg">
+    	<a href="#pictogramModal1"  data-toggle="modal" data-placement="left" title="Label goeas here" class="mytooltip"><b class="fa fa-file-text"></b></a>
+        <a href="#pictogramModal2"  data-toggle="modal" data-placement="left" title="Label goeas here" class="mytooltip"><b class="fa fa-pencil-square"></b></a>
+        <a href="#pictogramModal3"  data-toggle="modal" data-placement="left" title="Label goeas here" class="mytooltip"><b class="fa fa-book"></b></a>
+        <a href="#pictogramModal4"  data-toggle="modal" data-placement="left" title="Label goeas here" class="mytooltip"><b class="fa fa-renren"></b></a>
+        <a href="#pictogramModal5"  data-toggle="modal" data-placement="left" title="Label goeas here" class="mytooltip"><b class="fa fa-user-md"></b></a>
+        <a href="#pictogramModal6"  data-toggle="modal" data-placement="left" title="Label goeas here" class="mytooltip"><b class="fa fa-bar-chart-o"></b></a>
+        <a href="#pictogramModal7"  data-toggle="modal" data-placement="left" title="Label goeas here" class="mytooltip"><b class="fa fa-stethoscope"></b></a>
+    </aside>
+    <!-- pictogram -->
+    <!-- =================================================================
+    	MODAL WINDOWS FOR PANELS 
+    ================================================================== -->
+    <!-- MODAL WINDOWS FOR SCULPTURE AREA ======================= -->
+    <!-- modals 1 -->
+    <section class="modal fade" id="sculptureModal1" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- sculptureModal1 -->
+    <!-- modals 2 -->
+    <section class="modal fade" id="sculptureModal2" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- sculptureModal2 -->
+    <!-- modals 3 -->
+    <section class="modal fade" id="sculptureModal3" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- sculptureModal3 -->
+    <!-- MODAL WINDOWS FOR CHEIF COMPLAINTS AREA ======================= -->
+    <!-- modals 1 -->
+    <section class="modal fade" id="chiefCModal1" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- chiefCModal1 -->
+    <!-- modals 2 -->
+    <section class="modal fade" id="chiefCModal2" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- chiefCModal2 -->
+    <!-- modals 3 -->
+    <section class="modal fade" id="chiefCModal3" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- chiefCModal3 -->
+    <!-- MODAL WINDOWS FOR PLAN AREA ======================= -->
+    <!-- modals 1 -->
+    <section class="modal fade" id="planModal1" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- planModal1 -->
+    <!-- modals 2 -->
+    <section class="modal fade" id="planModal2" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- planModal2 -->
+    <!-- modals 3 -->
+    <section class="modal fade" id="planModal3" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- planModal3 -->
+    <!-- MODAL WINDOWS FOR ALGERRIES AREA ======================= -->
+    <!-- modals 1 -->
+    <section class="modal fade" id="algerriesModal1" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- algerriesModal1 -->
+    <!-- modals 2 -->
+    <section class="modal fade" id="algerriesModal2" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- algerriesModal2 -->
+    <!-- modals 3 -->
+    <section class="modal fade" id="algerriesModal3" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- algerriesModal3 -->
+    <!-- MODAL WINDOWS FOR PICTOGRAMS ======================= -->
+    <!-- modals 1 -->
+    <section class="modal fade" id="pictogramModal1" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- pictogramModal1 -->
+    <!-- modals 2 -->
+    <section class="modal fade" id="pictogramModal2" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- pictogramModal2 -->
+    <!-- modals 3 -->
+    <section class="modal fade" id="pictogramModal3" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- pictogramModal3 -->
+    <!-- modals 4 -->
+    <section class="modal fade" id="pictogramModal4" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- pictogramModal4 -->
+    <!-- modals 5 -->
+    <section class="modal fade" id="pictogramModal5" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- pictogramModal5 -->
+    <!-- modals 6 -->
+    <section class="modal fade" id="pictogramModal6" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- pictogramModal6 -->
+    <!-- modals 7 -->
+    <section class="modal fade" id="pictogramModal7" role="dialog">
+        <div class="modal-dialog"><div class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>This is Test Modal Box</h1>
+            </header>
+            <div class="modal-body">
+                <p>We'll show content of Tests, Please provide demonstration what will be displayed on this popup box.</p><br><br><br><br><br>
+            </div>
+            <footer class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal">Close</button>
+            </footer>
+        </div></div><!-- modal-dialog modal-content -->
+    </section>
+    <!-- pictogramModal7 -->
+    <footer id="bottom">
+    	<nav class="container">
+        	<div class="col-sm-6">
+                <ul class="navbar-left">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">SITEMAP</a></li>
+                </ul>
+                <br class="clearfix" /> 
+            </div>
+            <div class="col-sm-6">
+                <ul class="navbar-right">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <br class="clearfix" /> 
+            </div>
+            <p class="copyrights">Copyrights &copy; 2014 Medical App. All rights reserved.</p>
+    	</nav>
+    <br class="clearfix" /> 
+    </footer>
+    <!-- footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="wemblo.js" type="text/javascript"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <!-- <script type="text/javascript" src="js/map.js"></script>-->
+    <script type="text/javascript" src="js/jquery.maphilight.min.js"></script>
+    <script type="text/javascript" src="js/Wproc.js"></script>
+</body>
+</html>
